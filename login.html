@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./img/logoNewsLetter.svg" alt="" class="logo" />
+      </nav>
+    </header>
+    <div id="root">
+      <div id="LoginContainer">
+        <form id="loginForm">
+          <input type="email" id="emailLogin" required="required" placeholder="email" />
+
+          <input type="password" id="passwordLogin" required="required" placeholder="lösenord" />
+        </form>
+
+        <button id="loginBtn">Logga in</button>
+
+        <br /><br />
+        <p id="text"></p>
+        <br /><br />
+        <a href="/index.html">
+          <button>Tillbaka</button>
+        </a>
+      </div>
+      <div id="loggedInStateContainer">
+        <div id="logOutBtnContainer">
+          <a href="/index.html">
+            <button id="logOutBtn">Logga ut</button>
+          </a>
+        </div>
+        <h1>
+          Info om användare ID:
+          <h3 id="infoUserID"></h3>
+          <h3 id="infoUserEmail"></h3>
+        </h1>
+        <h2>
+          Premunerar :
+          <h2 id="userSubcribeState"></h2>
+        </h2>
+        <h2>Ändra statusen på din prenumeration</h2>
+        <label for="checkForUserState">Ändra här:</label>
+        <input type="checkbox" name="checkForUserState" id="changeUserSub" />
+        <button id="updateBtn">Uppdatera ditt konto</button>
+        <p id="updatedText"></p>
+      </div>
+      <div id="adminContainer"></div>
+    </div>
+  </body>
+</html>
