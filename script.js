@@ -72,7 +72,7 @@ loginBtn.addEventListener('click', () => {
 
 const loginUser = async (loginUserInfo) => {
   try {
-    await fetch('http://localhost:27017/login', {
+    await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ updateBtn.addEventListener('click', () => {
 ///Uppdatera user
 const updateUser = async (updatedUser) => {
   try {
-    await fetch('http://localhost:27017/updateUser', {
+    await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/updateUser', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ const updateUser = async (updatedUser) => {
 const loginAdmin = async (loginUserInfo) => {
   console.log(JSON.stringify(loginUserInfo));
   try {
-    await fetch('http://localhost:27017/admin', {
+    await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

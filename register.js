@@ -56,7 +56,7 @@ regBtn.addEventListener('click', function () {
 //Skapar användare
 const createUser = async (newUser) => {
   try {
-    await fetch('http://localhost:27017/register', {
+    await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
