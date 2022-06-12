@@ -52,11 +52,11 @@ loginBtn.addEventListener('click', () => {
     password: loginPassword,
   };
 
-  if (loginEmail === 'admin' && loginPassword === 'admin') {
-    console.log('admin');
-    loginAdmin(loginUserInfo);
-    return;
-  }
+  // if (loginEmail === 'admin' && loginPassword === 'admin') {
+  //   console.log('admin');
+  //   loginAdmin(loginUserInfo);
+  //   return;
+  // }
 
   if (loginEmail === '' || loginPassword === '') {
     console.log('Fel');
@@ -150,28 +150,28 @@ const updateUser = async (updatedUser) => {
   }
 };
 /////////////////////////////////////////////////
-///Admin login
-const loginAdmin = async (loginUserInfo) => {
-  console.log(JSON.stringify(loginUserInfo));
-  try {
-    await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/admin', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(loginUserInfo),
-    })
-      .then((response) => response.json())
-      .then((result) => {
-        adminContainer.innerHTML = result;
-        LoginContainer.style.display = 'none';
-        logOutBtnContainer.style.display = 'block';
-        document.getElementById('loginForm').reset();
-      });
-  } catch (error) {
-    console.error('Fel ', error);
-    document.getElementById('loginForm').reset();
+// ///Admin login
+// const loginAdmin = async (loginUserInfo) => {
+//   console.log(JSON.stringify(loginUserInfo));
+//   try {
+//     await fetch('https://wahlstrommm-newsletter-app.herokuapp.com/admin', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(loginUserInfo),
+//     })
+//       .then((response) => response.json())
+//       .then((result) => {
+//         adminContainer.innerHTML = result;
+//         LoginContainer.style.display = 'none';
+//         logOutBtnContainer.style.display = 'block';
+//         document.getElementById('loginForm').reset();
+//       });
+//   } catch (error) {
+//     console.error('Fel ', error);
+//     document.getElementById('loginForm').reset();
 
-    text.textContent = 'Fel inmatning..';
-  }
-};
+//     text.textContent = 'Fel inmatning..';
+//   }
+// };
